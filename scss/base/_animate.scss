@@ -1,0 +1,80 @@
+@import "../abstracts/variable";
+@mixin animation-button($pos) {
+  @if $pos == $slide {
+    &:hover {
+      color: #fff !important;
+      text-decoration: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 101%;
+      height: 101%;
+      background: $color-main;
+      z-index: 1;
+      transition: transform 0.5s;
+      transition-timing-function: ease;
+      transform-origin: 0 0;
+      transition-timing-function: linear;
+      transform: scaleX(0);
+    }
+    &:hover::before {
+      transform: scaleX(1);
+      color: #fff !important;
+      z-index: -1;
+    }
+  }
+  @if $pos == $bussiness {
+    &:hover {
+      color: $color-second !important;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 101%;
+      height: 101%;
+      background: #ffff;
+      z-index: 1;
+      transition: transform 0.5s;
+      transition-timing-function: ease;
+      transform-origin: 0 0;
+      transition-timing-function: linear;
+      transform: scaleX(0);
+    }
+    &:hover::before {
+      transform: scaleX(1);
+      color: $color-second !important;
+      z-index: -1;
+    }
+  }
+  @if $pos == $trusted {
+    &:hover {
+      color: $text__color-white !important;
+      text-decoration: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 101%;
+      height: 101%;
+      background: $color-second;
+      z-index: 1;
+      transition: transform 0.9s;
+      transition-timing-function: ease;
+      transform-origin: 0 0;
+      transition-timing-function: linear;
+      transform: scaleX(0);
+    }
+    &:hover::before {
+      transform: scaleX(1);
+      color: $text__color-white !important;
+      z-index: -1;
+    }
+  }
+}

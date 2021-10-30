@@ -1,0 +1,32 @@
+.feature {
+  color: #ffff;
+  padding: 48px;
+  box-shadow: none;
+  img {
+    height: auto;
+    width: auto;
+    max-width: 66px;
+    max-height: 66px;
+  }
+  &__title {
+    padding: 33px 0px;
+    margin-bottom: 0;
+    font: {
+      family: "Roboto", sans-serif;
+      size: 17px;
+      weight: bold;
+    }
+  }
+  &__middle {
+    width: 51px;
+    height: 3px;
+    background-color: #ffff;
+  }
+  &__content {
+    padding: 33px 0px;
+    font: {
+      size: 13px;
+      weight: normal;
+    }
+  }
+}

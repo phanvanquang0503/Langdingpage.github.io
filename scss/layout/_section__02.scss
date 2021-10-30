@@ -1,0 +1,29 @@
+@import "../abstracts/variable";
+@import "../abstracts/mixin";
+
+#section__02 {
+  margin-bottom: 35px;
+  .container {
+    .features {
+      display: grid;
+      grid: {
+        template: {
+          columns: $features-w-h $features-w-h $features-w-h;
+          rows: $features-w-h;
+        }
+        column-gap: 20px;
+      }
+      position: relative;
+      transform: translateY(-85px);
+      max-width: 100%;
+      overflow: hidden;
+      @import "../components/feature";
+      .feature#{$features-active} {
+        @include feature__block--color($features-active);
+      }
+      .feature#{$features} {
+        @include feature__block--color($features);
+      }
+    }
+  }
+}

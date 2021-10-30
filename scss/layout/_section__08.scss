@@ -1,0 +1,46 @@
+@import "../abstracts/variable";
+@import "../abstracts/mixin";
+#section__08 {
+  width: 100%;
+  margin-bottom: 80px;
+  .banner__darnk {
+    padding: 90px 0;
+    width: 100%;
+    background-color: $color-second;
+    .agencys {
+      display: grid;
+      grid: {
+        template: {
+          columns: auto auto;
+        }
+        gap: 20px;
+      }
+      &__item {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+          width: 70%;
+          height: auto;
+        }
+      }
+    }
+  }
+  .crafted {
+    text-align: right;
+    color: $text__color-white;
+    &__title {
+      font: {
+        size: 35px;
+        weight: bold;
+        family: sans-serif;
+      }
+    }
+    &__content {
+      font: {
+        size: 13.5px;
+      }
+    }
+  }
+}

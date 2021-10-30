@@ -1,0 +1,51 @@
+@import "../abstracts/variable";
+@import "../abstracts/mixin";
+#section__03 {
+  margin-bottom: 80px;
+  .services {
+    &__text {
+      text-align: center;
+      margin-bottom: 120px;
+      &--heading {
+        color: $color-main;
+        font: {
+          family: "Roboto", sans-serif;
+          size: 15px;
+          weight: bold;
+        }
+      }
+      &--title {
+        font: {
+          family: "Source Sans Pro", sans-serif;
+          size: 50px;
+          weight: bold;
+        }
+
+        span {
+          color: $color-main;
+        }
+      }
+      &--content {
+        color: #838383;
+        margin-top: 20px;
+        font: {
+          size: 13.5px;
+        }
+      }
+    }
+    &__items {
+      display: grid;
+      grid: {
+        template: {
+          columns: $services-w-h $services-w-h $services-w-h;
+          rows: $services-w-h;
+        }
+        column-gap: 171px;
+        row-gap: 20px;
+      }
+      max-width: 100%;
+      overflow: hidden;
+      @import "../components/service";
+    }
+  }
+}

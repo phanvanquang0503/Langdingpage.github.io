@@ -1,0 +1,89 @@
+@import "../abstracts/variable";
+@import "../abstracts/mixin";
+#section__10 {
+  width: 100%;
+  margin-bottom: 80px;
+
+  .aboutIt {
+    text-align: right;
+    &__title {
+      color: #000;
+      font: {
+        family: "Source Sans Pro", sans-serif;
+        size: 45px;
+        weight: bold;
+      }
+      vertical-align: top;
+    }
+    &__content {
+      color: #838383;
+      margin-bottom: 30px;
+      text-align: right;
+      font: {
+        size: 13px;
+      }
+      padding-left: 89px;
+    }
+  }
+  .form__service {
+    width: 100%;
+    margin-top: 20px;
+    input,
+    select,
+    textarea {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #000;
+      outline: none;
+      width: 100%;
+    }
+    select {
+      padding: 15px 8px;
+      font: {
+        family: "Rotobo", sans-serif;
+        size: 13px;
+      }
+    }
+    input:nth-child(2) {
+      padding: 10px;
+      display: inline;
+      float: left;
+      width: 47.5%;
+      margin-right: 15px;
+    }
+    input:nth-child(3) {
+      padding: 11px;
+      display: inline;
+      width: 47.5%;
+      float: right;
+    }
+    ::-webkit-input-placeholder {
+      /* Edge */
+      color: #000;
+      opacity: 1;
+      font: {
+        family: "Rotobo", sans-serif;
+        size: 13px;
+      }
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #000;
+      opacity: 1;
+      font: {
+        family: "Rotobo", sans-serif;
+        size: 13px;
+      }
+    }
+
+    ::placeholder {
+      color: #000;
+      opacity: 1;
+      font: {
+        family: "Rotobo", sans-serif;
+        size: 13px;
+      }
+    }
+  }
+}

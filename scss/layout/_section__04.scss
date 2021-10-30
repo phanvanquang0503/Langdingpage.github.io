@@ -1,0 +1,58 @@
+@import "../abstracts/variable";
+@import "../abstracts/mixin";
+#section__04 {
+  .banner__darnk {
+    background-color: $color-second;
+    width: 100%;
+    height: auto;
+
+    .bussiness__text {
+      text-align: left;
+      padding: 90px 0;
+      color: $text__color-white;
+      &--title {
+        font: {
+          family: "Source Sans Pro", sans-serif;
+          size: 40px;
+          weight: bold;
+        }
+      }
+      &--contnet {
+        font: {
+          size: 13.5px;
+        }
+        display: inline-block;
+        margin-top: 40px;
+      }
+      .button__bussiness {
+        text-decoration: none;
+        margin-top: 25px;
+        display: inline-block;
+        z-index: 10;
+      }
+    }
+    .bussiness__img {
+      padding: 90px 0px;
+      display: flex;
+      margin-left: 130px;
+      @include bussiness-img(
+        1,
+        "../../images/bussiness/bussiness_02.jpg",
+        297px,
+        297px,
+        left,
+        130px,
+        90px
+      );
+      @include bussiness-img(
+        1,
+        "../../images/bussiness/bussiness_01.jpg",
+        297px,
+        297px,
+        right,
+        130px,
+        90px
+      );
+    }
+  }
+}

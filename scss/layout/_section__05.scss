@@ -1,0 +1,53 @@
+@import "../abstracts/variable";
+@import "../abstracts/mixin";
+#section__05 {
+  width: 100%;
+  margin-bottom: 80px;
+  .banner__light {
+    padding: 90px 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    .options {
+      display: grid;
+      grid: {
+        template: {
+          columns: auto auto;
+        }
+        gap: 20px;
+      }
+      &__item {
+        &--title {
+          font: {
+            size: 15px;
+            weight: bold;
+            family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+          }
+        }
+        &--content {
+          color: #969696;
+          font: {
+            size: 13.5px;
+            family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+          }
+        }
+      }
+    }
+    .provides {
+      &__title {
+        padding-top: -10px;
+        font: {
+          family: "Source Sans Pro", sans-serif;
+          size: 40px;
+          weight: bold;
+        }
+      }
+      &__content {
+        color: #969696;
+        font: {
+          size: 13.5px;
+          family: "Source Sans Pro", sans-serif;
+        }
+      }
+    }
+  }
+}

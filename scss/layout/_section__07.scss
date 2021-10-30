@@ -1,0 +1,35 @@
+@import "../abstracts/variable";
+@import "../abstracts/mixin";
+#section__07 {
+  .banner__light {
+    // background-color: #fff;
+    width: 100%;
+    height: auto;
+
+    .trusted__text {
+      text-align: left;
+      padding: 90px 0;
+      color: #000;
+      &--title {
+        font: {
+          family: "Source Sans Pro", sans-serif;
+          size: 40px;
+          weight: bold;
+        }
+      }
+      &--contnet {
+        font: {
+          size: 13.5px;
+        }
+        display: inline-block;
+        margin-top: 40px;
+      }
+      .button__trusted {
+        text-decoration: none;
+        margin-top: 25px;
+        display: inline-block;
+        z-index: 10;
+      }
+    }
+  }
+}

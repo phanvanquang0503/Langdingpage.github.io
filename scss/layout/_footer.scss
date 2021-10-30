@@ -1,0 +1,124 @@
+@import "../abstracts/variable";
+@import "../abstracts/mixin";
+footer {
+  color: #ffff;
+  background-color: $color-second;
+  .footer__1 {
+    padding-top: 80px;
+    .logo-container {
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li:first-child {
+      border-bottom: 2px solid $color-main;
+    }
+    li:not(:first-child) {
+      margin-left: 50px;
+    }
+    li {
+      list-style: none;
+      flex-shrink: 0;
+      a {
+        font: {
+          family: "Roboto", sans-serif;
+          size: 13px;
+          weight: bold;
+        }
+        text-decoration: none;
+        color: #ffff;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  .footer__2 {
+    margin-top: 90px;
+
+    &--contact {
+      .contact {
+        color: #ffff;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+    &--address {
+      .address {
+        color: #eaeaeb;
+        font: {
+          family: "Roboto", sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+        }
+      }
+    }
+    &--subscrible-title {
+      color: #ffff;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: right;
+    }
+    &--subscrible-input {
+      width: 100%;
+      .formFooter {
+        width: 100%;
+        input {
+          width: 80%;
+          border: none;
+          outline: none;
+          padding: 7px;
+          float: left;
+        }
+        ::-webkit-input-placeholder {
+          /* Edge */
+          font: {
+            family: "Rotobo", sans-serif;
+            size: 13px;
+          }
+        }
+        :-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          font: {
+            family: "Rotobo", sans-serif;
+            size: 13px;
+          }
+        }
+        ::placeholder {
+          font: {
+            family: "Rotobo", sans-serif;
+            size: 13px;
+          }
+        }
+        .button__form--footer {
+          width: 20%;
+          border: none;
+          background: $color-main;
+          color: #ffff;
+          padding: 7px;
+        }
+      }
+    }
+  }
+  .footer__3 {
+    margin-top: 70px;
+    padding-bottom: 40px;
+    .img-container {
+      img {
+        width: 15px;
+        height: auto;
+      }
+      img:not(:first-child) {
+        margin-left: 20px;
+      }
+    }
+    &--copyright {
+      color: #515b5d;
+      font-size: 13px;
+      text-align: right;
+    }
+  }
+}

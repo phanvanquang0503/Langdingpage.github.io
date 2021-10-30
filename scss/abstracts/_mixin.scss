@@ -1,0 +1,66 @@
+@import "../abstracts/variable";
+// clearfix
+@mixin clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// button
+@mixin boder-color($pos) {
+  @if $pos == $slide {
+    background-color: transparent;
+    color: #ededed;
+    border: 2px solid $color-main;
+  } @else if $pos == $slide-active {
+    background-color: $color-main;
+    color: #ffff;
+    border: 2px solid $color-main;
+    margin-right: 30px;
+    padding: 11px 54px;
+    text-decoration: none;
+  } @else if $pos == $bussiness {
+    background-color: transparent;
+    color: #ffff;
+    border: 2px solid #ffff;
+  } @else if $pos ==$trusted {
+    background-color: transparent;
+    color: #000;
+    border: 2px solid #000;
+  } @else if $pos == $form {
+    background-color: $color-main;
+    color: $text__color-white;
+    border-style: none;
+    width: 100%;
+  }
+}
+//FEATURES
+@mixin feature__block--color($sta) {
+  @if $sta == $features-active {
+    background-color: $color-main;
+  } @else if $sta == $features {
+    background-color: $color-second;
+  }
+}
+// minxin image
+@mixin bussiness-img($ind, $url, $height, $size, $pos, $mg-l, $mgtb) {
+  @if $ind ==1 {
+    width: 255px;
+    height: $height;
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: auto $size;
+    background-position: $pos;
+    margin-left: $mg-l;
+    margin: $mgtb 0;
+  } @else if $ind==2 {
+    width: 255px;
+    height: $height;
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: auto $size;
+    background-position: $pos;
+    margin-left: $mg-l;
+    margin: $mgtb $m;
+  }
+}
